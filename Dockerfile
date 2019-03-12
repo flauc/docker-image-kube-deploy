@@ -1,7 +1,7 @@
 FROM alpine:latest as Builder
 ADD https://storage.googleapis.com/kubernetes-release/release/v1.10.3/bin/linux/amd64/kubectl /bin/kubectl
 RUN apk add --no-cache curl
-RUN cd /bin/ && curl http://storage.googleapis.com/kubernetes-helm/helm-v2.9.1-linux-amd64.tar.gz | \
+RUN cd /bin/ && curl http://storage.googleapis.com/kubernetes-helm/helm-v2.8.1-linux-amd64.tar.gz | \
     tar -xvz --strip-components=1 linux-amd64/helm
 RUN chmod +x /bin/kubectl && chmod +x /bin/helm
 
